@@ -35,6 +35,7 @@ elseif("${STM32_HAL_TARGET_MCU}" STREQUAL "STM32F103xx")
 endif()
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${TARGET_FLAGS}")
+# -u _printf_float -u _scanf_float 这两个参数是为了启用输入和输出浮点数支持
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -u _printf_float -u _scanf_float")
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)

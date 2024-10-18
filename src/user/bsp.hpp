@@ -1,7 +1,7 @@
 #ifndef _USER_BSP_
 #define _USER_BSP_
 
-#include "stm32h7xx_hal.h"
+#include "stm32h7xx.h"
 #include "global.hpp"
 
 /**

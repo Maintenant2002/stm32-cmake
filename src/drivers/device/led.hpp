@@ -1,7 +1,7 @@
 #ifndef _DEVICE_LED_
 #define _DEVICE_LED_
 
-#include "stm32h7xx_hal.h"
+#include "stm32h7xx.h"
 
 template<typename PeripheralType>
 inline constexpr PeripheralType& convert(PeripheralType* GPIOx) 

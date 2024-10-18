@@ -59,6 +59,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/user
     ${CMAKE_CURRENT_SOURCE_DIR}/src/drivers/device
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/drivers/stm32h7xx
 )
 
 # Add project symbols (macros)
