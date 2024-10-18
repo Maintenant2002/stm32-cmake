@@ -11,13 +11,13 @@
 
 // MOS Kernel Components
 #include "config.h"
-#include "kernel/macro.hpp"
-#include "kernel/utils.hpp"
-#include "kernel/data_type.hpp"
-#include "kernel/global.hpp"
-#include "kernel/task.hpp"
-#include "kernel/sync.hpp"
-#include "kernel/scheduler.hpp"
-#include "kernel/ipc.hpp"
+// #include "kernel/macro.hpp"
+// #include "kernel/utils.hpp"
+// #include "kernel/data_type.hpp"
+// #include "kernel/global.hpp"
+// #include "kernel/task.hpp"
+// #include "kernel/sync.hpp"
+// #include "kernel/scheduler.hpp"
+// #include "kernel/ipc.hpp"
 
 #endif
