@@ -3,6 +3,12 @@
 
 #include "stm32h7xx_hal.h"
 
+template<typename PeripheralType>
+inline constexpr PeripheralType& convert(PeripheralType* GPIOx) 
+{
+    return reinterpret_cast<PeripheralType&>(*GPIOx);  // 这里显式解引用指针
+}
+
 namespace Drivers::Device
 {
     struct LED_t
@@ -13,17 +19,15 @@ namespace Drivers::Device
 
         Port_t _port;
         Pint_t _pin;
-
-        static inline constexpr GPIO_TypeDef&
-		convert(Raw_t GPIOx) { return (GPIO_TypeDef&) (*GPIOx); }
         
         LED_t() = delete;
 
         LED_t(Port_t port, Pint_t pin)
             : _port(port), _pin(pin) {}
 
+        // 外设类型指针转换为引用
         LED_t(Raw_t GPIOx, Pint_t pin)
-            : _port(convert(GPIOx)), _pin(pin) {}
+            : _port(convert<GPIO_TypeDef>(GPIOx)), _pin(pin) {}
 
         inline void init()
         {

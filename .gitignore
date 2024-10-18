@@ -1,2 +1,3 @@
 .vscode/
 build/
+vendor/stm32_hal_drivers/STM32F1xx_HAL_Driver/
